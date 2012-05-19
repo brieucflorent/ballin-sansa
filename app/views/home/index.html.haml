@@ -1,0 +1,15 @@
+%table
+  %tbody
+    %tr
+      %td
+      %td= link_to "movies", movies_url
+    %tr  
+      %td= link_to image_tag("rss.jpg"), rss_movies_url
+      %td= link_to "movies", rss_movies_url
+    %tr  
+      %td= link_to image_tag("rss.jpg"), rss_movie_url(:id => 7.5)
+      %td= link_to "movies_with_rating > 7.5", rss_movie_url(:id => 7.5)
+    %tr  
+      %td= link_to image_tag("rss.jpg"), rss_movie_url(:id => 7.5,:weekday => 'now')
+      %td= link_to "movies_with_rating > 7.5 for current week", rss_movie_url(:id => 7.5,:weekday => 'now')
+

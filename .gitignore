@@ -1,0 +1,11 @@
+#*
+\#*\#
+*~
+TAGS
+db/schema.rb
+log/
+db/*.sqlite3
+config/initializers/omniauth.rb
+rename.sh
+public/uploads/tmp/
+tmp/

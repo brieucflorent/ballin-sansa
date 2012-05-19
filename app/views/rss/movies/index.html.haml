@@ -1,0 +1,18 @@
+%rss{ :version => '2.0'} 
+    
+  %channel 
+    - @movies.each do |movie|   
+      %item 
+        
+        %title= movie.title 
+        %link= movie.reference 
+        %category DVD
+        %pubDate= movie.release_date
+        %description= "Show Name: " + movie.title
+        %enclosure
+        %comments http://eztv.it/forum/discuss/25272/
+        %guid= movie.reference
+        %torrent{ :xmlns => 'http://xmlns.ezrss.it/0.1/'} 
+          
+          %fileName= movie.filename       
+

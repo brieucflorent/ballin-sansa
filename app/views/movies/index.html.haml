@@ -1,0 +1,23 @@
+-#  This file is app/views/movies/index.html.haml
+
+= form_tag movies_path, :method => :get, :id => 'ratings_form' do
+  = hidden_field_tag "title_sort", true if @title_header
+  = hidden_field_tag ":release_date_sort", true if @date_header
+
+= link_to "rss_link", rss_movies_url
+  
+%table#movies
+  %thead
+    %tr
+      %th{:class => @title_header}Movie Title
+      %th Rating
+      %th Calendar week
+      %th d_link
+  %tbody
+    - @movies.each do |movie|
+      %tr
+        %td= link_to movie.title, movie.imdblink 
+        %td= movie.rating
+        %td= movie.cweek
+        %td= link_to "d_link", movie.reference
+

@@ -1,0 +1,9 @@
+Used the skeleton from hw3_rottenpotatoes to do at the end a photogallery.
+Features:
+----------
+- facebook/google authentification for admin operations ( devise omniauth)
+- carrierwave_fog to store photos on an external provider
+- gallery template adapted from Vivid http://www.priteshgupta.com/
+- drag and drop functionality for photo upload
+
+

@@ -1,0 +1,22 @@
+-#!!! 5
+-# http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither
+-#- html_tag :class => "no-js", :lang => "en" do
+-#  = render "head"
+
+-#  %body{ :class => "#{ controller.controller_name }" }
+-#    = render "chromeframe"
+-#    = render "header"
+
+-#    #main{ :role => "main" }
+-#      = render "flashes"
+= stylesheet_link_tag 'albums'
+
+= javascript_include_tag 'jquery.min','jquery.rails','application','albums'
+= csrf_meta_tag
+
+= yield
+
+-#    = render "footer"
+
+    -# Javascript at the bottom for fast page loading
+-#    = render "javascripts"
