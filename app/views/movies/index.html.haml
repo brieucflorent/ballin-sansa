@@ -11,6 +11,7 @@
     %tr
       %th{:class => @title_header}Movie Title
       %th Year
+      %th
       %th Rating
       %th Calendar week
       %th d_link
@@ -19,6 +20,7 @@
       %tr
         %td= link_to movie.title, movie.imdblink 
         %td= movie.year
+        %td
         %td= movie.rating
         %td= movie.cweek
         %td= link_to "d_link", movie.reference
