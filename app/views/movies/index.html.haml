@@ -19,7 +19,7 @@
     - @movies.each do |movie|
       %tr
         %td= link_to movie.title, movie.imdblink 
-        %td= movie.year
+        %td= "(" + movie.year.to_s + ") "
         %td
         %td= movie.rating
         %td= movie.cweek
