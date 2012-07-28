@@ -16,12 +16,11 @@ class MoviesController < ApplicationController
 
     if params[:weekday] == 'now'
       @movies = Movie.where("rating >=? and cweek = ?",id,Date.today.cweek).order("cweek DESC,year DESC, title ASC")
-      
+
     elsif params[:weekday] =~ /\d+/
       @movies = Movie.where("rating >=? and cweek = ?",id,params[:weekday]).order("cweek DESC,year DESC, title ASC")
-
     else
-       @movies = Movie.where("rating >=?",id).order("cweek DESC,year DESC, title ASC")
+      @movies = Movie.where("rating >=?",id).order("cweek DESC,year DESC, title ASC")
     end
 
   end
